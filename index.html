@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<body class="flex flex-col items-center bg-[url('https://wallpapers.com/images/hd/buildings-1920-x-1080-background-b27j96f6nfyhn6ab.jpg')]">
+
+    <div class="bg-transparent border-t-2 border-gray-600 mt-4 w-full"></div>
+
+    <div class="flex flex-col items-center h-[70vh] w-[20%] mt-4 ml-4 rounded-md shadow-xl backdrop-blur-sm bg-white/30">
+
+        <h2 class="text-center text-lg font-bold mb-4">Peenchimento de informações</h2>
+
+        <div class="flex items-center p-3 rounded-md w-[90%] justify-center">
+            <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60" 
+            type="text" name="informações" placeholder="Seu nome">
+          </div>
+
+          <div class="flex items-center p-3 rounded-md w-[90%] justify-center">
+            <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60" 
+            type="text" name="informações" placeholder="Sua idade">
+          </div>
+
+          <div class="flex items-center p-3 rounded-md w-[90%] justify-center">
+            <select class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60"  name="" id="">
+                <option value="masc">Masculino</option>
+                <option value="fem">Feminino</option>
+            </select>
+          </div>
+
+          <p class="p-3 text-center">O paciente tem alguma cormobidade?</p>
+
+          <div class="flex flex-row justify-start">
+          <input class="flex justify-start" type="radio" name="cormo" onclick="document.getElementById('01').style.visibility='visible'">Sim
+          </div>
+          <div class="flex flex-row">
+            <input type="radio" name="cormo" onclick="document.getElementById('01').style.visibility='hidden'; document.getElementById('02').style.visibility='hidden';
+             document.getElementById('03').style.visibility='hidden'">Não
+            </div>
+
+            <div class="flex items-center p-3 rounded-md w-[90%] justify-center flex-col" id="ab">
+                <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60 invisible" 
+                id="01" type="text" name="informações" placeholder="Comorbidade" onclick="document.getElementById('02').style.visibility='visible'; document.getElementById('03').style.visibility='visible'">
+            </div>
+
+            <div>
+                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2 invisible" id="02"
+                onclick="mais()">+</button>
+
+                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2 invisible" id="03"
+                onclick="menos()">-</button>
+            </div>
+
+        <button class="backdrop-blur-sm bg-white/20 P-3 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out mt-4" type="reset">ENVIAR</button>
+
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
