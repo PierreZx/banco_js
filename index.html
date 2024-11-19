@@ -9,13 +9,15 @@
 
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 <body class="flex flex-col items-center bg-[url('https://wallpapers.com/images/hd/buildings-1920-x-1080-background-b27j96f6nfyhn6ab.jpg')]">
 
     <div class="bg-transparent border-t-2 border-gray-600 mt-4 w-full"></div>
 
     <div class="flex flex-col items-center h-[70vh] w-[20%] mt-4 ml-4 rounded-md shadow-xl backdrop-blur-sm bg-white/30">
 
-        <h2 class="text-center text-lg font-bold mb-4">Peenchimento de informações</h2>
+        <h2 class="text-center text-lg family-Outfit mb-4 mt-4">CADASTRO DE IDOSOS</h2>
 
         <div class="flex items-center p-3 rounded-md w-[90%] justify-center">
             <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60" 
@@ -36,29 +38,35 @@
 
           <p class="p-3 text-center">O paciente tem alguma cormobidade?</p>
 
-          <div class="flex flex-row justify-start">
-          <input class="flex justify-start" type="radio" name="cormo" onclick="document.getElementById('01').style.visibility='visible'">Sim
+        <div class="flex flex-row justify-start">
+          <input class="flex justify-start" type="radio" name="cormo" onclick="document.getElementById('ab').style.visibility='visible'">Sim
           </div>
           <div class="flex flex-row">
-            <input type="radio" name="cormo" onclick="document.getElementById('01').style.visibility='hidden'; document.getElementById('02').style.visibility='hidden';
-             document.getElementById('03').style.visibility='hidden'">Não
+            <input type="radio" name="cormo" onclick="document.getElementById('ab').style.visibility='hidden'">Não
             </div>
 
-            <div class="flex items-center p-3 rounded-md w-[90%] justify-center flex-col" id="ab">
-                <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60 invisible" 
-                id="01" type="text" name="informações" placeholder="Comorbidade" onclick="document.getElementById('02').style.visibility='visible'; document.getElementById('03').style.visibility='visible'">
-            </div>
+            <div class="flex items-center p-3 rounded-md w-[90%] justify-center flex-row invisible" id="ab">
+ 
+                <div class="flex flex-col  md:scroll-auto h-[150px] overflow-auto" id="invo">
+                    <input class="rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out w-60 h-[35px]  backdrop-blur-sm bg-white/60" 
+                    id="01" type="text" name="informações" placeholder="Comorbidade">
+                </div>
 
-            <div>
-                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2 invisible" id="02"
+                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2"
                 onclick="mais()">+</button>
 
-                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2 invisible" id="03"
+                <button class="size-7 backdrop-blur-sm bg-white/60 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out ml-2"
                 onclick="menos()">-</button>
             </div>
 
         <button class="backdrop-blur-sm bg-white/20 P-3 rounded-md hover:scale-105 hover: transition-all duration-300 ease-in-out mt-4" type="reset">ENVIAR</button>
 
+</div>
+
+    <div class="flex flex-row justify-center h-[192px] bg-gray-600 mt-[60px] w-full">
+            <p class="mt-4">
+                Copyright- Healthy-Vision ® Todos os direitos reservados
+            </p>
     </div>
 
 

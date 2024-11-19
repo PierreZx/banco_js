@@ -1,0 +1,7 @@
+#invo {
+    max-height: 600px; /* Limite de altura da div */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    padding: 10px;
+    width: 600px;
+}
